@@ -11,7 +11,7 @@ A real-time brightness monitoring solution on web implemented with arduino via W
 
 ### Layout
 
-<img src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/photoR.png" width="720"  title="photovaluesReading"/>
+<img src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/photoR.png" width="720" title="photovaluesReading"/>
 
 ### Code
 ```arduino
