@@ -4,7 +4,7 @@ This is course project about arduino wireless communication.
 A real-time brightness monitoring solution on web implemented with arduino via WiFi.
 
 ## **Electronic Component**
-| <ul><li>Breadboard * 1</li><li>Arduino UNO * 1</li><li>Resistor 10k Ω * 1</li><li>Photoresistance * 1</li><li>ESP8266 ESP-01 * 1</li><li>LM1117-3.3 Regulator * 1</li></ul> | ![conponent](https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/component.png) |
+| <ul><li>Breadboard * 1</li><li>Arduino UNO * 1</li><li>Resistor 10k Ω * 1</li><li>Photoresistance * 1</li><li>ESP8266 ESP-01 * 1</li><li>LM1117-3.3 Regulator * 1</li></ul> | ![conponent](https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/component.png) |
 | :------| :------|
 
 ## **Photoresistance values reading**
