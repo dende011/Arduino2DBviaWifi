@@ -41,7 +41,7 @@ void loop() {
 
 The more details can be obtained from [official github](https://github.com/esp8266/esp8266-wiki/wiki) or [datasheet](https://nurdspace.nl/File:ESP8266_Specifications_English.pdf).
 ***
-### Since the max current supplied by arduino is only 50mA, which fails to meet the features of ESP8266 ESP-01 above, a regulator is used to steps up current (while stepping down voltage).
+### Since the max current supplied by arduino which is only 50mA, fails to meet the features of ESP8266 ESP-01 above, a regulator is used to steps up current (while stepping down voltage).
 
 
 
