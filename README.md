@@ -40,9 +40,8 @@ void loop() {
 * 802.11g, OFDM 54Mbps, POUT=+16dBm 145 mA on a 3.3V power supply
 
 The more details can be obtained from [official github](https://github.com/esp8266/esp8266-wiki/wiki) or [datasheet](https://nurdspace.nl/File:ESP8266_Specifications_English.pdf).
-*****************************
-### According to the former features of ESP8266 ESP-01, steps up voltage (while stepping down current) 
-
+***
+### Since the max current supplied by arduino is only 50mA, which fails to meet the features of ESP8266 ESP-01 above, a regulator is used to steps up current (while stepping down voltage).
 
 
 
