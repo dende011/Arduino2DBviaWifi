@@ -48,7 +48,7 @@ The more details can be obtained from [official github](https://github.com/esp82
 ### **LM1117-3.3 Regulator**
 |||
 | :------| :------|
-The more details can be obtained from [datasheet](http://www.ti.com/lit/ds/symlink/lm1117.pdf)
+The more details can be obtained from [datasheet](http://www.ti.com/lit/ds/symlink/lm1117.pdf).
 ### **Layout**
 
 |ESP8266 ESP-01|Arduino Uno|LM1117-3.3|
