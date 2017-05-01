@@ -4,14 +4,14 @@ This is course project about arduino wireless communication.
 A real-time brightness monitoring solution on web implemented with arduino via WiFi.
 
 ## **Electronic Component**
-| <ul><li>Breadboard * 1</li><li>Arduino UNO * 1</li><li>Resistor 10k Ω * 1</li><li>Photoresistance * 1</li><li>ESP8266 ESP-01 * 1</li><li>LM1117-3.3 Regulator * 1</li></ul> | <img src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/component.png" title="component" width="720"/> |
+| <ul><li>Breadboard * 1</li><li>Arduino UNO * 1</li><li>Resistor 10k Ω * 1</li><li>Photoresistance * 1</li><li>ESP8266 ESP-01 * 1</li><li>LM1117-3.3 Regulator * 1</li></ul> | <img src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/component.png" title="component" width="240"/> |
 | :------| :------|
 
 ## **Photoresistance values reading**
 
 ### Layout
 
-<img src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/photoR.png" width="720" title="photovaluesReading"/>
+<img src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/photoR.png" width="360" title="photovaluesReading"/>
 
 ### Code
 ```arduino
@@ -31,7 +31,7 @@ void loop() {
 
 ``` 
 ## **Result**
-<img title="photoresult" src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/photoresult.png" width="720"/>
+<img title="photoresult" src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/photoresult.png" width="360"/>
 
 ## **ESP8266 ESP-01**
 ### Basic Features 
@@ -40,4 +40,4 @@ void loop() {
 * 802.11g, OFDM 54Mbps, POUT=+16dBm 145 mA on a 3.3V power supply
 
 The more details can be obtained from [official github](https://github.com/esp8266/esp8266-wiki/wiki) or [datasheet](https://nurdspace.nl/File:ESP8266_Specifications_English.pdf).
-
+*****************************
