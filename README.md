@@ -10,7 +10,7 @@ A real-time brightness monitoring solution on web implemented with arduino via W
 ## **Photoresistance values reading**
 
 ### Layout
-![photovaluesReading](https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/photoR.png)
+![photovaluesReading](https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/photoR.png)
 ### Code
 ```arduino
 int Pin = 2; // linking (photocell) to anallog pin 2
@@ -29,7 +29,7 @@ void loop() {
 
 ``` 
 ## **Result**
-![photoresult](https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/photoresult.png)
+![photoresult](https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/photoresult.png)
 
 ## **ESP8266 ESP-01**
 ### Basic Features 
@@ -37,6 +37,5 @@ void loop() {
 * 802.11n, MCS7, POUT =+14dBm 135mA on a 3.3V power supply
 * 802.11g, OFDM 54Mbps, POUT=+16dBm 145 mA on a 3.3V power supply
 
-The more details can be obtained from [official github](https://github.com/esp8266/esp8266-wiki/wiki) or [datasheet](https://nurdspace.nl/File:ESP8266_Specifications_English.pdf)
+The more details can be obtained from [official github](https://github.com/esp8266/esp8266-wiki/wiki) or [datasheet](https://nurdspace.nl/File:ESP8266_Specifications_English.pdf).
 
-![dataplot](http://www.ti.com/lit/ds/symlink/lm1117.pdf)
