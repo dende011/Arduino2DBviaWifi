@@ -32,17 +32,18 @@ void loop() {
 ``` 
 ## **Result**
 <img title="photoresult" src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/photoresult.png" width="360"/>
-***
+
+****
 ## **Wifi transmission**
-## **ESP8266 ESP-01**
-### Basic Features
+### **ESP8266 ESP-01**
+#### Basic Features
 * VDDIO:  1.7V ~ 3.6V(V10)
 * 802.11n, MCS7, POUT =+14dBm 135mA on a 3.3V power supply
 * 802.11g, OFDM 54Mbps, POUT=+16dBm 145 mA on a 3.3V power supply
 
 The more details can be obtained from [official github](https://github.com/esp8266/esp8266-wiki/wiki) or [datasheet](https://nurdspace.nl/File:ESP8266_Specifications_English.pdf).
 ***
-### Since the max current supplied by arduino which is only 50mA, fails to meet the features of ESP8266 ESP-01 above, a regulator is used to steps up current (while stepping down voltage).
+#### Since the max current supplied by arduino which is only 50mA, fails to meet the features of ESP8266 ESP-01 above, a regulator is used to steps up current (while stepping down voltage).
 
 
 
