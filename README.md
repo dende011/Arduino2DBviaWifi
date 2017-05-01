@@ -46,5 +46,20 @@ The more details can be obtained from [official github](https://github.com/esp82
 #### Since the max current supplied by arduino which is only 50mA, fails to meet the features of ESP8266 ESP-01 above, a regulator is used to steps up current (while stepping down voltage).
 
 ### **LM1117-3.3 Regulator**
+|||
+| :------| :------|
+The more details can be obtained from [datasheet](http://www.ti.com/lit/ds/symlink/lm1117.pdf)
+### **Layout**
 
+|ESP8266 ESP-01|Arduino Uno|LM1117-3.3|
+|------|------|------|
+|UTXD|RX||
+|URXD|TX||
+||5V|V_in|
+||GND|GND|
+|CH_PD||V_out|
+|VCC||V_out|
+|GND||GND|
+
+![layoutW](https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/layoutW)
 
