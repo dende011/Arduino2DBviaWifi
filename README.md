@@ -46,6 +46,8 @@ void loop() {
 |V0.9.2.2|9600|
 |V0.9.5.2|115200|
 
+>#### If it need to flashing a new firmware, [AT command Set](http://www.pridopia.co.uk/pi-doc/ESP8266ATCommandsSet.pdf) can be used.
+
 The more details can be obtained from [official github](https://github.com/esp8266/esp8266-wiki/wiki) or [datasheet](https://nurdspace.nl/File:ESP8266_Specifications_English.pdf).
 
 
@@ -70,3 +72,132 @@ The more details can be obtained from [datasheet](http://www.ti.com/lit/ds/symli
 
 <img title="layoutW" src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/LayoutW.png" width="360"/>
 
+### **HTTP Request**
+In the project, method `GET` is used to transfer data.
+
+#### Request example code
+
+```sh
+GET /receive.php?{key}={value}&{key}={value} HTTP/1.1
+       Host: {Target IP}
+```
+Other method can be see from [RFC2616](https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html).
+
+### Arduino code
+#### Parameters setting
+```arduino
+#include <SoftwareSerial.h>
+
+// light
+int Pin = 2;
+int Val = 0;
+
+//connect
+String SID = "wifi名稱";
+String PWD = "wifi密碼";
+String IP = "server IP";
+String file = "接收端php檔案";
+
+boolean upload = false;
+
+// connect 8 to TX of wifi esp8266
+// connect 9 to RX of wifi esp8266
+SoftwareSerial esp8266(8,9); // RX, TX
+```
+#### Initialize esp8266
+```arduino
+void init_wifi(){
+  Serial.println("=======================================");
+  Serial.println("|---  Esp8266 Setting  —|\n");
+
+  sendCommand("AT+RST",5000); // reset module
+  sendCommand("AT+CWMODE=1",2000); // 
+  sendCommand("AT+CWJAP=\""+SID+"\",\""+PWD+"\"",5000);
+  sendCommand("AT+CIPMUX=0",2000); 
+ 
+  Serial.println("\n|---  Setting Finish  ---|");
+  Serial.println("=======================================");
+  Serial.println(" Please Enter :");
+  Serial.println("( 1 )  \" o \" ---> Upload data");
+  Serial.println("( 2 )  \" x \" ---> Stop uploading data");
+  Serial.println("( 3 )  \" reset \" ---> Reset esp8266");
+  Serial.println("( 4 )  \" AT+Command \" ---> Control esp8266");
+  Serial.println("======================================="); 
+}
+```
+![initial](https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/initial.png)
+#### Reading controle
+```arduino
+void loop() {
+  
+    Val = analogRead(Pin);  // reading values
+  
+    while(Serial.available())
+    {
+        String input = Serial.readString();
+        //Serial.println(input);   
+        
+        if (input == "o")
+        {
+            Serial.println("\n|---  Upload Start  ---|");
+            upload = true;
+        }
+        else if (input == "x")
+        {
+           Serial.println("\n|---  Upload Stop  ---|");
+           upload = false;
+        }
+        else if (input == "reset")
+        { 
+           init_wifi();
+           upload = false;
+        }
+ else
+        {
+          if(!upload)
+            if(input.substring(0,2) =="AT"){
+              esp8266.println(input);
+            }
+        }
+        input = "";  
+    }
+```
+![transfer](https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/transfer.png)
+#### Data transferring
+```arduino
+void uploadData()
+{
+  // convert to string
+  // TCP connection
+  String cmd = "AT+CIPSTART=\"TCP\",\"";
+  cmd += IP; //host
+  cmd += "\",80";
+  esp8266.println(cmd);
+   
+  if(esp8266.find("Error")){
+    Serial.println("AT+CIPSTART error");
+    return;
+  }
+  
+  // prepare GET string
+  String getStr = "GET /"+file+"?value=";
+  getStr += String(Val);
+  getStr +=" HTTP/1.1\r\nHost:"+IP;
+  getStr += "\r\n\r\n";
+  // send data length
+  cmd = "AT+CIPSEND=";
+  cmd += String(getStr.length());
+  esp8266.println(cmd);
+
+  if(esp8266.find(">")){
+    esp8266.print(getStr);
+  }
+  else{
+    esp8266.println("AT+CIPCLOSE");
+    // alert user
+    Serial.println("AT+CIPCLOSE");
+  }
+  delay(2000);  
+}
+```
+![stopping](https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/stopping.png)
