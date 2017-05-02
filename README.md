@@ -235,3 +235,8 @@ Using php program to receive data then write to mySQL.
 Vitulizing the data on web using [HIGHCHARTS](https://www.highcharts.com/).
 
 <img src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/web.png" title="web" width="720"/>
+
+## License
+
+See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
+
