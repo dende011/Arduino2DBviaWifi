@@ -226,7 +226,7 @@ Using php program to receive data then write to mySQL.
     $result = mysql_query("insert into $tableName (data) VALUES ($light)");
 ```
 ### Result 
-<img src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/db.png" title="db" width="720"/>
+<img src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/db.png" title="db" high="720" width="360"/>
 
 ****
 
