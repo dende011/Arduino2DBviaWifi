@@ -203,3 +203,31 @@ void uploadData()
 }
 ```
 <img src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/stopping.png" title="stopping" width="720"/>
+
+### Data receiving
+Using php program to receive data then write to mySQL.
+```php
+<?php
+  
+  $light = $_GET['value'];
+  //user information
+  $host = "server IP";
+  $user = "user";
+  $pass = "pw";
+  //database information
+  $databaseName = "Database Name";
+  $tableName = "Table Name";
+    //Connect to mysql database
+  $con = mysql_connect($host,$user,$pass);
+
+  $dbs = mysql_select_db($databaseName, $con);
+
+  //Query database for data
+    $result = mysql_query("insert into $tableName (data) VALUES ($light)");
+```
+### Result 
+<img src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/db.png" title="db" width="720"/>
+***
+## Web vitulization
+Vitulizing the data using [HIGHCHARTS](https://www.highcharts.com/).
+<img src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/web.png" title="web" width="720"/>
