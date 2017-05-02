@@ -227,7 +227,11 @@ Using php program to receive data then write to mySQL.
 ```
 ### Result 
 <img src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/db.png" title="db" width="720"/>
-***
+
+****
+
 ## Web vitulization
+
 Vitulizing the data using [HIGHCHARTS](https://www.highcharts.com/).
+
 <img src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/web.png" title="web" width="720"/>
