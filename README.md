@@ -93,10 +93,10 @@ int Pin = 2;
 int Val = 0;
 
 //connect
-String SID = "wifi名稱";
-String PWD = "wifi密碼";
+String SID = "wifi SSID";
+String PWD = "wifi key";
 String IP = "server IP";
-String file = "接收端php檔案";
+String file = "php file(server side)";
 
 boolean upload = false;
 
