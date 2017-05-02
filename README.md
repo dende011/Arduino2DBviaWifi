@@ -51,7 +51,7 @@ void loop() {
 The more details can be obtained from [official github](https://github.com/esp8266/esp8266-wiki/wiki) or [datasheet](https://nurdspace.nl/File:ESP8266_Specifications_English.pdf).
 
 
->#### Since the max current supplied by arduino which is only `50mA`, fails to meet the features of ESP8266 ESP-01 above, a regulator is used to steps up current (while stepping down voltage).
+>#### Since the max current supplied by arduino which is only `50mA`, fails to meet the features of ESP8266 ESP-01 above, a regulator is used to boosts current (while dropping voltage).
 
 ### **LM1117-3.3 Regulator**
 |![lmdata](https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/lmdata.png)|![lm](https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/lm.png)|
@@ -226,12 +226,12 @@ Using php program to receive data then write to mySQL.
     $result = mysql_query("insert into $tableName (data) VALUES ($light)");
 ```
 ### Result 
-<img src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/db.png" title="db" high="720" width="360"/>
+<img src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/db.png" title="db" width="360"/>
 
 ****
 
 ## Web vitulization
 
-Vitulizing the data using [HIGHCHARTS](https://www.highcharts.com/).
+Vitulizing the data on web using [HIGHCHARTS](https://www.highcharts.com/).
 
 <img src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/web.png" title="web" width="720"/>
