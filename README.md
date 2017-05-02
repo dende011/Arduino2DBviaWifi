@@ -125,7 +125,8 @@ void init_wifi(){
   Serial.println("======================================="); 
 }
 ```
-![initial](https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/initial.png)
+<img src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/initial.png" title="initial" width="720"/>
+
 #### Reading controle
 ```arduino
 void loop() {
@@ -162,7 +163,8 @@ void loop() {
         input = "";  
     }
 ```
-![transfer](https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/transfer.png)
+<img src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/transfer.png" title="transfer" width="720"/>
+
 #### Data transferring
 ```arduino
 void uploadData()
@@ -200,4 +202,4 @@ void uploadData()
   delay(2000);  
 }
 ```
-![stopping](https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/stopping.png)
+<img src="https://github.com/nightheronry/Arduino2DBviaWifi/blob/master/images/stopping.png" title="stopping" width="720"/>
